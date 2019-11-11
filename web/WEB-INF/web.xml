@@ -17,7 +17,19 @@
         <servlet-name>Register</servlet-name>
         <url-pattern>/addUser</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>Lister</servlet-name>
+        <servlet-class>in.edu.dmodi.loginwebapp.servlets.ListerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Lister</servlet-name>
+        <url-pattern>/listUser</url-pattern>
+    </servlet-mapping>
+    
     <welcome-file-list>
         <welcome-file>home.jsp</welcome-file>
     </welcome-file-list>
+    
+    
 </web-app>

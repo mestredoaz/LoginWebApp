@@ -6,6 +6,7 @@
 package in.edu.dmodi.loginwebapp.util;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -23,5 +24,15 @@ public class CredentialStore {
     
     public static boolean containsUser(String user, String pwd, String role) {
         return _users.contains(new Credential(user, pwd, role));
+    }
+    
+    public static int addUser(String user, String pwd, String rolename, String fname, String lname, String email) {
+        _users.add(new Credential(user, pwd, rolename, fname, lname, email));
+        return 1;
+    }
+    
+    public static Set<Credential> getUsers(){
+        return _users;
+        
     }
 }
